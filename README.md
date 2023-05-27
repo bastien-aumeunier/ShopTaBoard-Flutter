@@ -1,76 +1,26 @@
-# e_commerce_front_getx
+# ShopTaBoard Project With Flutter GetX
 
-# Doc install (Linux)
-
-## 1- installer flutter 
-
-aller sur : 
-```
-https://docs.flutter.dev/get-started/install/linux
-```
-installer via snapd: 
-```
-sudo snap install flutter --classic
-```
-
-ou 
-
-installer via ce lien
-```
-https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.7.12-stable.tar.xz
-```
-
-dé-zipé le fichier dans un dossier development et le mettre dans le path
-```
-export PATH="$PATH:`pwd`/flutter/bin"
-```
-test :
-```
-flutter doctor
-```
-
-## 2 - installer Android studio 
-
-lien du telechargement
-```
-https://developer.android.com/studio
-```
-suivre les instructions du logiciel 
-accepté les conditions général d'utilisations etc... 
-
-Dans device manager de Android studio télécharger un émulateur (de préférence de grande taille pour notre application)
-
-
-accepté les licences d'android avec cette commande :
-```
-flutter doctor --android-licenses
-```
-
-
-## 3 - run l'application 
-
-Une fois l'installation d'android studio terminé,
-mettez en marche l'émulateur 
-ouvrer le terminal de android studio ou un terminal classic 
-et faite la commande : 
-
-pour installer les dépendances :
-```
-flutter pub get 
-```
-pour run le projet :
-```
+## Installation
+```bash
+git clone git@github.com:bastien-aumeunier/ShopTaBoard-Flutter.git
+cd ShopTaBoard-Flutter
+flutter pub get
 flutter run
 ```
-ou runner le projet en mode debug cliquer sur le bouton vert dans la barre d'outils en haut 
 
-Profiter de notre magnifique e-commerce ;))
+## Other Resources
 
-+ à mettre ça dans un fichier .env
+- Frontend with React : [here][front]
+- Backend with NestJS : [here][back]
+- Real Git Repo : [here][git]
 
-```
-URL_API="http://161.97.90.183:8000"
-STRIPE_API_KEY='pk_test_51Ml9mZBikVn85IoUlXLM3RX77AtBDcCdsQXNoA9sKVKOkjabUudluKUwHDYt601c9lXKgSTr27wGZvS8uM1HJuQj00o5U2qyq7'
-```
+## Collaborators
 
+- Graig Kolodziejczyk : [Github](https://github.com/Gra1gkolodziejczyk)
+- Flavio De Freitas : [Github](https://github.com/DeFreitasFlavio)
+- Romain Michel : [Github](https://github.com/rastain42)
+
+[front]: https://github.com/bastien-aumeunier/ShopTaBoard
+[back]: https://github.com/bastien-aumeunier/back-ecommerce
+[git]: https://github.com/Gra1gkolodziejczyk/flutter_ecommerce_getx
 
