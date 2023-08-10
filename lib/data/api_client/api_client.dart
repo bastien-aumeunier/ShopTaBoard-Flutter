@@ -1,4 +1,6 @@
 import 'package:dio/dio.dart';
+import 'package:dio/io.dart';
+import 'dart:io';
 import 'package:e_commerce_front_getx/data/models/commandes/commandes_response_model.dart';
 import 'package:e_commerce_front_getx/data/models/convertPanier/convert_panier_request_model.dart';
 import 'package:e_commerce_front_getx/data/models/panier/panier_request_model.dart';
@@ -42,6 +44,12 @@ class ApiClient with CacheManager {
   }
 
   void initDioClient() {
+    (dio.httpClientAdapter as IOHttpClientAdapter).onHttpClientCreate =
+        (client) {
+      client.badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+      return client;
+    };
     //permet de suivre les redirection du back
     dio.options.followRedirects = true;
 
